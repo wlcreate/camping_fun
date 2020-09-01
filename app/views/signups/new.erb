@@ -1,0 +1,11 @@
+<h2> New Signup Form </h2>
+
+<%= form_for @signup do |f| %>
+    <%= f.label :camper_id %>
+    <%= f.collection_select :camper_id, @campers, :id, :name %> <br>
+    <%= f.label :activity_id %>
+    <%= f.collection_select :activity_id, @activities, :id, :name %> <br>
+    <%= f.label :time %>
+    <%= f.number_field :time %> <br>
+    <%= f.submit "Complete!" %>
+<% end %>

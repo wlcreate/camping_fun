@@ -1,3 +1,9 @@
 <h2>Here are All the Activities</h2>
 
 <%# Display a list all of the activities %>
+
+<ul>
+<% @activities.each do |activity_var| %>
+   <li> <%= link_to activity_var.name, activity_path(activity_var) %> </li>
+<% end %>
+</ul>
